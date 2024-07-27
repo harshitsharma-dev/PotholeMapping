@@ -1,0 +1,12 @@
+Flask
+opencv-python
+torch
+tensorflow
+werkzeug
+ultralytics
+pillow
+argparse
+gunicorn
+sqlalchemy
+pymysql
+Flask-SQLAlchemy
