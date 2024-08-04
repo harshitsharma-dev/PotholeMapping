@@ -1,6 +1,4 @@
-Here's the updated `README.md` file with "YOLOv8" instead of "YOLOv9":
 
----
 
 # YOLOv8 Object Detection Dashboard
 
