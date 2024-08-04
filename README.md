@@ -1,105 +1,92 @@
 
+# PotholeMapping
 
-# YOLOv8 Object Detection Dashboard
+PotholeMapping is a web-based application for detecting and mapping potholes on roads using YOLOv8 object detection. This project provides a dashboard to visualize detected potholes, road quality, and create routes with customized markers.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Introduction
 
-This project is a web-based dashboard for YOLOv8 object detection and road quality assessment. It provides a user-friendly interface for uploading images or videos, detecting objects using the YOLOv8 model, and mapping road quality on a map with corresponding coordinates.
+PotholeMapping is designed to assist in detecting potholes on roads and mapping their locations. It leverages YOLOv8, a state-of-the-art object detection model, to identify potholes in images and videos. The detected information is then displayed on an interactive map, allowing users to analyze road quality and plan routes accordingly.
 
 ## Features
 
-- **Image and Video Upload**: Upload images or videos for object detection.
-- **Object Detection**: Utilizes YOLOv8 for detecting objects in uploaded media.
-- **Road Quality Mapping**: Visual representation of road quality on a map, categorized by quality levels.
-- **Interactive Map**: Users can interact with the map to add markers and create routes.
-- **Route Analysis**: Provides distance calculations and segments routes based on road quality.
+- **Pothole Detection:** Detect potholes using YOLOv8 in images and videos.
+- **Map Integration:** Visualize detected potholes on an interactive map.
+- **Route Creation:** Create and customize routes with markers.
+- **Road Quality Analysis:** Display road quality based on detected potholes.
 
-## Setup
+## Installation
 
-### Prerequisites
-
-- Python 3.8 or above
-- Flask
-- OpenCV
-- TomTom Maps SDK
-- Other dependencies listed in `requirements.txt`
-
-### Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/yourusername/YOLOv8-Object-Detection-Dashboard.git
-   cd YOLOv8-Object-Detection-Dashboard
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/harshitsharma-dev/PotholeMapping.git
+   cd PotholeMapping
    ```
 
-2. **Install the dependencies:**
+2. **Set Up a Virtual Environment:**
+   ```sh
+   python3 -m venv env
+   source env/bin/activate  # On Windows, use `env\Scripts\activate`
+   ```
 
-   ```bash
+3. **Install Dependencies:**
+   ```sh
    pip install -r requirements.txt
    ```
 
-3. **Set up API keys:**
-
-   Replace `APIKEY` in the `main.py` and the HTML files with your TomTom API key.
-
-4. **Run the application:**
-
-   ```bash
-   python main.py
+4. **Run the Application:**
+   ```sh
+   flask run
    ```
-
-   The application will be available at `http://localhost:5000`.
 
 ## Usage
 
-1. **Upload Media:**
-   - Navigate to the upload section and choose an image or video file.
-   - Click "Upload" to start the object detection process.
+1. **Upload Image/Video:**
+   - Navigate to the upload section and choose an image or video file for detection.
+   - The detected results will be displayed on the map.
 
-2. **View Results:**
-   - The detected objects will be displayed on the same page.
-   - The road quality information will be shown below the detected objects.
+2. **Map Interaction:**
+   - Add markers, search locations, and create routes on the interactive map.
+   - Customize the travel mode and visualize the road quality.
 
-3. **Map Interaction:**
-   - Use the map to visualize the route and road quality.
-   - Add markers by clicking on the map or by entering coordinates.
-   - Create a route by selecting the "Create Route" option.
-   - Choose the travel mode (car, motorcycle, truck, pedestrian, bicycle) to get the route.
+3. **Analysis:**
+   - View the detected potholes and road quality analysis on the dashboard.
 
-## Code Overview
+## File Structure
 
-### `main.py`
-
-The main backend logic, handling the Flask server, route definitions, and object detection using YOLOv8. It also includes functions for road quality assessment and mapping.
-
-### `templates/base.html`
-
-The base HTML file, providing the structure for the web application. It includes the necessary CSS and JS files and defines the layout.
-
-### `templates/dashboard.html`
-
-The main dashboard page, containing the content for image/video upload, object detection results, and the interactive map.
-
-### `static/assets/`
-
-Contains static files like CSS, JS, and images used in the application.
+```
+PotholeMapping/
+│
+├── app/
+│   ├── static/
+│   ├── templates/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── yolov8.py
+│   └── ...
+│
+├── requirements.txt
+├── README.md
+└── ...
+```
 
 ## Contributing
 
-Feel free to fork this repository and contribute by submitting a pull request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before getting started.
 
 ## License
 
-This project is licensed under the MIT License.
-
-## Acknowledgments
-
-- [YOLOv8](https://github.com/ultralytics/yolov8) for object detection.
-- [TomTom Maps SDK](https://developer.tomtom.com/maps-sdk-web) for map integration.
-- [Flask](https://flask.palletsprojects.com/) for the web framework.
-- [Bootstrap](https://getbootstrap.com/) for front-end design.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ---
 
-You can copy and paste this `README.md` content into your GitHub repository. Adjust any specific details as needed.
+Feel free to customize this README according to your project's specific requirements and structure. Let me know if you'd like any modifications!
