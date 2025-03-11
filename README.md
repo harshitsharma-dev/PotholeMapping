@@ -3,6 +3,10 @@
 
 PotholeMapping is a web-based application for detecting and mapping potholes on roads using YOLOv8 object detection. This project provides a dashboard to visualize detected potholes, road quality, and create routes with customized markers.
 
+### Machine Learning Intern, IIT Kharagpur
+https://github.com/harshitsharma-dev/PotholeMapping
+![Image here](Picture1.png "Pothole detection and route analysis in video itself")
+![Image2 here](Picture3.jpg "Mapping it for minal product on web using flask and api")
 ## Table of Contents
 
 - [Introduction](#introduction)
